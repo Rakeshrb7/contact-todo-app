@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Dashboard</h1>
+    </header>
+    
+    <div class="container">
+        <!-- Contact Form Section -->
+        <div class="form-section">
+            <h2>Contact Form</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="formMessage"></div>
+        </div>
+        
+        <!-- To-Do List Section -->
+        <div class="todo-section">
+            <h2>To-Do List</h2>
+            <div class="todo-input-container">
+                <input type="text" id="todoInput" placeholder="Enter a new task...">
+                <button onclick="addTodo()">Add</button>
+            </div>
+            <ul id="todoList"></ul>
+            <div id="emptyState" class="empty-state">No tasks yet. Add one above!</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
